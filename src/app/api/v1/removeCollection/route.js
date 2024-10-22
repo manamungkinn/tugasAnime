@@ -26,6 +26,7 @@ export async function DELETE(request) {
 
     return NextResponse.json({ status: 200, isCreated: true }, { status: 200 });
   } catch (error) {
+    console.error("Prisma error:", error);
     NextResponse.json({ status: 500, message: "Server error", error: error.message }, { status: 500 });
     // return new Response(JSON.stringify({ status: 500, message: "Server error", error: error.message }), { status: 500 });
   }

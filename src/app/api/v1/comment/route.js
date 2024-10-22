@@ -13,6 +13,7 @@ export async function POST(request) {
       return NextResponse.json({ status: 200, isCreated: true });
     }
   } catch (error) {
+    console.error("Prisma error:", error);
     return NextResponse.json({ status: 500, message: "Server error", error: error.message }), { status: 500 };
   }
 }
