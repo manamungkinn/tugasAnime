@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-const DashboardComment = ({ data }) => {
+const DashboardComment = ({ data,i }) => {
   return (
-    <div>
+    <div key={i}>
       <div className="overflow-x-scroll shadow-sm flex w-full scroll-smooth ">
         <div className=" flex gap-2 max-w-fit place-items-center my-1 px-[1px] ">
           {data.map((data) => {
