@@ -1,5 +1,6 @@
 import nextAuth from "next-auth";
 import githubProvider from "next-auth/providers/github";
+import googleProvider from "next-auth/providers/google";
 
 const options = {
   providers: [
@@ -7,6 +8,10 @@ const options = {
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
+    googleProvider({
+      clientId:process.env.GOOGLE_CLIENT_ID,
+      clientSecret:process.env.GOOGLE_SECRET_ID,
+    })
   ],
   secret: process.env.NEXTAUTH_SECRET,
 };
@@ -17,18 +22,13 @@ export const session = {
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
+    googleProvider({
+      clientId:process.env.GOOGLE_CLIENT_ID,
+      clientSecret:process.env.GOOGLE_SECRET_ID,
+    })
   ],
   secret: process.env.NEXTAUTH_SECRET,
 };
-
-// export async function OPTIONS() {
-//   return new Response(null, {
-//     status: 204, // No Content
-//     headers: {
-//       "Allow": "OPTIONS, GET, POST", // Tentukan metode yang diizinkan
-//     },
-//   });
-// }
 
 const handler = nextAuth(options);
 
