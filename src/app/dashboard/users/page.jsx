@@ -6,8 +6,6 @@ import DropDownProfile from "@/components/DropDownProfile";
 import CollectionList from "@/components/CollectionList";
 import DashboardComment from "@/components/DashboadComment";
 
-
-
 const Page = async () => {
   const user = await authUserSession();
   let collection = await prisma.collection.findMany({

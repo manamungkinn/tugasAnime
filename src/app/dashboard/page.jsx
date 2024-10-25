@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Dashboard = async () => {
   const user = await authUserSession();
-
+  console.log(user)
   const UserLogin = () => {
     return (
       <div className="container p-4 mt-2">
