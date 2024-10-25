@@ -14,7 +14,7 @@ const Dashboard = async () => {
             <ButtonSignIn />
           </div>
           <div className="flex items-center justify-center p-6 flex-col">
-            <Image className="w-32 h-32 rounded-full border-2 border-blue-500" src={user.image} alt="Profile" width={250} height={250} />
+            <Image priority={true} className="w-32 h-32 rounded-full border-2 border-blue-500" src={user.image} alt="Profile" width={250} height={250} />
             <div className="flex gap-3 mt-3 text-sm">              
             <Link href={"dashboard/users"} className="bg-main-accent px-1 py-[2px] rounded-sm  bg-opacity-90 hover:bg-opacity-100">
               My Collection
