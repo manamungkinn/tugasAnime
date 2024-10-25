@@ -10,7 +10,7 @@ const options = {
     }),
     googleProvider({
       clientId:process.env.GOOGLE_CLIENT_ID,
-      clientSecret:process.env.GOOGLE_SECRET_ID,
+      clientSecret:process.env.GOOGLE_CLIENT_SECRET,
     })
   ],
   secret: process.env.NEXTAUTH_SECRET,
@@ -24,12 +24,23 @@ export const session = {
     }),
     googleProvider({
       clientId:process.env.GOOGLE_CLIENT_ID,
-      clientSecret:process.env.GOOGLE_SECRET_ID,
+      clientSecret:process.env.GOOGLE_CLIENT_SECRET,
     })
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  debug: true,
 };
 
 const handler = nextAuth(options);
 
 export { handler as GET, handler as POST };
+
+
+
+
+// Teknik baru
+// export const {handlers,signIn,signOut,auth}=NextAuth({
+// provider:[Google],
+// })
+
+// https://www.youtube.com/watch?v=XQbiMiNah0o

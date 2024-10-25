@@ -11,6 +11,9 @@ const nextConfig = {
             {
                 hostname:"placehold.jp"
             },
+            {
+                hostname:"lh3.googleusercontent.com"
+            },
         ]
     }
 };
