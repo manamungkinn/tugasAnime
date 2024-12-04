@@ -1,5 +1,6 @@
 import prisma from "@/libs/prisma";
 import { NextResponse } from "next/server";
+
 export async function POST(request) {
   try {
     const { anime_mal_id, user_email, comment, user_name, user_image, date } = await request.json();

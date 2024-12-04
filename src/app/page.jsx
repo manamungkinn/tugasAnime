@@ -10,14 +10,15 @@ const Page = async () => {
   const topAnime = await ApiAnime("/top/anime"); //apiAnime
 
   let recommendations = await nestedApiAnime("/recommendations/anime", "entry");
-  recommendations = reproduce(recommendations, 24);
+  recommendations = reproduce(recommendations, 16);
+  // console.log(recommendations)
 
   return (
     <>
       {/* Paling Populer */}
       <section className="container py-4">
         <div className=" text-main-primary">
-        <Header title=" Paling populer" linkHref="/populer" linkTitle="See all populer" />
+        <Header title="Most Popular" linkHref="/populer" linkTitle="See all populer" />
         </div>
         <div className="bg-main-accent">
           <HorizontalList api={topAnime} />
@@ -28,7 +29,7 @@ const Page = async () => {
       {/* Anime Baru */}
       <section className="mt-[10px] container">
         <div className="text-main-primary">
-        <Header title="Rekomendasi Anime" linkHref="/recommendations" linkTitle="See all" />
+        <Header title="Recommended Anime" linkHref="/recommendations" linkTitle="See all" />
         </div>
         {/* <>
 

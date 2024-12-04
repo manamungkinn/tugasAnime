@@ -27,6 +27,7 @@ const Page = async ({ params: { id } }) => {
     },
   });
 
+  console.log(comment)
   comment = {data:comment}
 
   // let x = ~~(Math.random() * recommendations.length - 24 + 1);

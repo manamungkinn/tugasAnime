@@ -19,8 +19,8 @@ const Dashboard = async () => {
             <Link href={"dashboard/users"} className="bg-main-accent px-1 py-[2px] rounded-sm  bg-opacity-90 hover:bg-opacity-100">
               My Collection
             </Link>
-            <Link href={"dashboard/users"} className="bg-main-accent px-1 py-[2px] rounded-sm bg-opacity-90 hover:bg-opacity-100">
-              My  Collection
+            <Link href={"dashboard/users"} className="bg-yellow-500 px-1 py-[2px] rounded-sm bg-opacity-90 hover:bg-opacity-100">
+              Sama Aja Cuma Rasa Jeruk
             </Link>
             </div>
           </div>
